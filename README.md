@@ -149,9 +149,13 @@ Chaque fonctionnalité doit être intégrée via une **Pull Request**, relue par
 
 Projet réalisé en trinôme dans le cadre d'un travail collaboratif de conception et de développement web.
 
-- **Membre 1 :** [Nom et prénom]
-- **Membre 2 :** [Nom et prénom]
-- **Membre 3 :** [Nom et prénom]
+- **Membre 1 :** [ BEN ABOU ANASS ]
+- **Membre 2 :** [ ELHOUSSINE ASSOUMA ]
+- **Membre 3 :** [ Aouaj Yassine ]
+- **Membre 3 :** [ LAMSSIAH MOHAMED ]
+- **Membre 3 :** [ Zakarya Roua ]
+
+
 
 Les rôles Scrum Master, Gardien du Design System et Gardien de l'accessibilité sont répartis au sein de l'équipe.
 
