@@ -12,16 +12,20 @@ Ce projet consiste à concevoir et développer une interface web moderne, intuit
 
 L'objectif est d'offrir une expérience utilisateur fluide sur mobile, tablette et ordinateur, tout en valorisant le patrimoine naturel et culturel de la région de Nador.
 
+---
+
 ## ✨ Fonctionnalités
 
 - 🏠 **Accueil** — présentation de l'agence et mise en avant des activités phares.
-- 🛶 **Catalogue des activités** — découverte des excursions et expériences proposées.
-- 🏞️ **Détail des activités** — galerie photos, programme, tarifs et informations pratiques.
-- 📅 **Réservation** — formulaire avec champs accessibles et validation native.
-- ❓ **FAQ** — réponses aux questions fréquentes des visiteurs.
-- 📱 **Menu responsive** — navigation adaptée aux appareils mobiles.
-- ♿ **Accessibilité** — navigation au clavier, focus visible et contrastes conformes aux bonnes pratiques WCAG.
-- 🎨 **Design System** — composants et styles visuels cohérents et réutilisables.
+- 📋 **Catalogue des activités** — découverte des excursions et expériences proposées.
+- 🔍 **Détail des activités** — galerie photos, programme, tarifs et informations pratiques.
+- 📅 **Réservation** — formulaire avec champs accessibles et validation HTML native.
+- ❓ **FAQ** — réponses aux questions fréquentes des visiteurs via accordéons sans JavaScript.
+- 📱 **Menu responsive** — navigation mobile accessible sans JavaScript (`<details>` / `<summary>`).
+- ♿ **Accessibilité** — navigation au clavier, focus visible et contrastes conformes aux bonnes pratiques WCAG AA.
+- 🎨 **Design System** — composants et styles visuels cohérents et réutilisables basés sur Tailwind CSS v4.
+
+---
 
 ## 🛶 Activités proposées
 
@@ -31,61 +35,89 @@ L'objectif est d'offrir une expérience utilisateur fluide sur mobile, tablette 
 - Découverte de la gastronomie locale
 - Observation des oiseaux et découverte de la nature
 
-## 🛠️ Technologies utilisées
+---
 
-| Technologie | Utilisation |
+## 🛠️ Technologies et contraintes techniques
+
+| Technologie | Rôle dans le projet |
 |---|---|
-| HTML5 | Structure sémantique des pages |
-| CSS3 | Mise en page et styles complémentaires |
-| Tailwind CSS v4 | Styles utilitaires et Design System |
-| Vite | Environnement de développement et build |
-| Git & GitHub | Gestion du code et collaboration |
-| Figma | Maquettes haute fidélité et Design System |
+| **HTML5** | Structure sémantique et accessible des pages, validation native des formulaires |
+| **Tailwind CSS v4** | Framework utilitaire moderne et Design System centralisé via `@theme` |
+| **Vite** | Environnement de développement rapide et outil de build de production |
+| **CSS personnalisé** | Styles complémentaires intégrés via `src/css/style.css` si nécessaire |
+| **Git & GitHub** | Gestion de versions et workflow collaboratif |
+| **Figma** | Maquettes haute fidélité et Design System |
 
-> La stack exacte doit correspondre aux technologies réellement utilisées dans le dépôt.
+> **Contrainte stricte :** Aucun JavaScript applicatif personnalisé n'est utilisé dans le projet. Les interactions (comme le menu mobile ou les accordéons FAQ) sont gérées exclusivement en HTML/CSS natif (notamment avec les balises `<details>` et `<summary>`). Le seul fichier `.js` présent est `vite.config.js`, qui sert uniquement à la configuration de l'outillage Vite.
+
+---
 
 ## 📂 Structure du projet
 
+L'arborescence du projet est organisée selon la structure suivante :
+
 ```text
-Marchica-Trips/
-│
+marchica-trips/
 ├── index.html                 # Page d'accueil
-├── activites.html             # Liste des activités
-├── detail-activite.html       # Détail d'une activité
+├── activites.html             # Liste des activités touristiques
+├── detail-activite.html       # Détails, programme, prix, galerie et infos pratiques d'une activité
 ├── reservation.html           # Formulaire de réservation
 ├── faq.html                   # Questions fréquentes
-│
-├── css/
-│   └── style.css              # Styles communs du site
-│
-├── images/
-│   ├── logo.png
-│   ├── hero-marchica.jpg
-│   ├── kayak.jpg
-│   ├── bateau.jpg
-│   ├── gourougou.jpg
-│   └── cuisine.jpg
-│
-└── README.md                  # Documentation du projet
+├── src/
+│   └── css/
+│       └── style.css          # Entrée CSS principale (Tailwind CSS v4 + @theme + styles personnalisés)
+├── public/
+│   ├── images/                # Images et photographies du site
+│   └── icons/                 # Icônes vectorielles et graphiques
+├── package.json               # Métadonnées du projet et scripts npm (Vite, Tailwind CSS)
+├── package-lock.json          # Fichier de verrouillage des dépendances npm
+├── vite.config.js             # Configuration Vite (plugin @tailwindcss/vite)
+├── .gitignore                 # Règles d'exclusion pour Git
+└── README.md                  # Documentation complète du projet
 ```
 
-*Cette arborescence est indicative : adapte-la à la structure réelle du projet.*
+### Rôle des pages et fichiers clés
 
-## 🚀 Installation et lancement
+- **`index.html`** : Page d'accueil présentant le concept de Marchica Trips, les points forts de la région et les activités vedettes.
+- **`activites.html`** : Catalogue complet des activités touristiques proposées avec filtres ou catégorisations visuelles.
+- **`detail-activite.html`** : Page détaillée dédiée à une activité spécifique (galerie photos, itinéraire, programme détaillé, tarifs, durée, matériel inclus et recommandations).
+- **`reservation.html`** : Formulaire de réservation accessible avec validation native HTML5 (champs requis, types de saisie, limites de dates et de participants).
+- **`faq.html`** : Réponses aux questions fréquentes des voyageurs, organisées à l'aide d'éléments natifs `<details>` et `<summary>` sans script.
+- **`src/css/style.css`** : Point d'entrée des styles important Tailwind CSS v4 (`@import "tailwindcss";`), les design tokens du thème (`@theme`) et les ajustements CSS personnalisés.
+- **`public/images/` & `public/icons/`** : Répertoires d'actifs statiques servis directement par Vite (photos de la lagune, logos, icônes SVG).
+- **`package.json`** : Déclare les scripts d'exécution (`dev`, `build`, `preview`) et les dépendances du projet (`vite`, `@tailwindcss/vite`, `tailwindcss`).
+- **`vite.config.js`** : Fichier de configuration Vite intégrant le plugin officiel `@tailwindcss/vite`.
 
-### Prérequis
+---
 
-- [Node.js](https://nodejs.org/)
-- npm
-- Git
+## 🚀 Installation et démarrage
+
+Suivez ces instructions pour installer les dépendances et exécuter le projet localement.
+
+### Prerequis
+
+Assurez-vous que les outils suivants sont installés sur votre machine :
+- [Git](https://git-scm.com/)
+- [Node.js](https://nodejs.org/) (incluant npm)
+
+Vérifiez les versions installées dans votre terminal :
+
+```bash
+node -v
+npm -v
+```
 
 ### 1. Cloner le dépôt
+
+Si vous n'avez pas encore téléchargé le projet :
 
 ```bash
 git clone https://github.com/zakarya0roua/Marchica-Trips.git
 ```
 
-### 2. Accéder au projet
+### 2. Accéder au dossier du projet
+
+Ouvrez un terminal directement dans le dossier racine du projet :
 
 ```bash
 cd Marchica-Trips
@@ -93,94 +125,105 @@ cd Marchica-Trips
 
 ### 3. Installer les dépendances
 
+Installez les dépendances déclarées dans `package.json` :
+
 ```bash
 npm install
 ```
 
 ### 4. Lancer le serveur de développement
 
+Démarrez le serveur local avec rechargement à chaud (Hot Module Replacement) :
+
 ```bash
 npm run dev
 ```
 
-Ouvre ensuite l'adresse locale indiquée dans le terminal par Vite.
+Une fois le serveur lancé, Vite affiche dans le terminal une URL locale, généralement :
 
-### 5. Générer la version de production
+```text
+http://localhost:5173/
+```
+
+> **Note :** Ouvrez dans votre navigateur l'adresse exacte affichée dans votre terminal par Vite.
+
+### 5. Compiler pour la production
+
+Pour générer les fichiers optimisés et minifiés dans le dossier `dist/` :
 
 ```bash
 npm run build
 ```
 
-Pour vérifier le résultat de production :
+### 6. Prévisualiser la version de production
+
+Pour tester localement le rendu de la compilation de production :
 
 ```bash
 npm run preview
 ```
 
-## 🎨 Design System
+---
 
-Le Design System vise à garantir une identité visuelle cohérente sur toutes les pages.
+## 📐 Bonnes pratiques et accessibilité
 
-- **Couleurs :** bleu profond, turquoise et tons neutres inspirés de la lagune.
-- **Typographie :** hiérarchie claire et lisible.
-- **Espacements :** échelle cohérente et réutilisable.
-- **Composants :** boutons, cartes d'activités, champs de formulaire et éléments de navigation.
-- **Responsive design :** approche mobile-first avec les points de rupture Tailwind CSS.
-- **Accessibilité :** contrastes vérifiés, focus visible et interactions utilisables au clavier.
+Le développement respecte des exigences strictes en matière de qualité web et d'accessibilité :
 
-Les couleurs, espacements et tailles doivent être centralisés dans le thème Tailwind CSS v4 via `@theme`.
+- **Design responsive mobile-first :** Interfaces optimisées pour smartphones, tablettes et écrans larges à l'aide des points d'arrêt Tailwind CSS.
+- **Zéro JavaScript personnalisé :** Interactions (menu mobile, accordéons de la FAQ) implémentées nativement via les balises `<details>` et `<summary>`.
+- **Validation HTML native :** Formulaire de réservation sécurisé et guidé sans script (attributs `required`, `type`, `min`, `max`, `pattern`, `autocomplete`).
+- **Navigation au clavier & focus visible :** Tous les éléments interactifs (liens, boutons, résumés d'accordéon) sont navigables au clavier avec un anneau de focus distinct.
+- **Lien d'évitement :** Lien d'accès rapide au contenu principal (`#main`) pour les utilisateurs de lecteurs d'écran.
+- **Contraste WCAG AA :** Ratio de contraste supérieur ou égal à 4,5:1 pour le texte courant, assurant une parfaite lisibilité.
+- **Sémantique accessible :** Utilisation rigoureuse des balises sémantiques HTML5 (`<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<footer>`) et des attributs ARIA lorsque nécessaire.
 
-## ♿ Accessibilité et qualité
-
-Le projet accorde une attention particulière à :
-
-- La navigation complète au clavier.
-- Un lien d'évitement vers le contenu principal.
-- Des labels associés aux champs de formulaire.
-- Des textes alternatifs pertinents pour les images.
-- Des indicateurs de focus toujours visibles.
-- Un contraste de texte conforme au niveau WCAG AA, soit généralement **4,5:1 pour le texte courant**.
-- Des tests avec axe DevTools et Lighthouse.
+---
 
 ## 🌿 Workflow Git
 
-Le développement collaboratif suit un workflow inspiré de Git Flow.
+Le développement collaboratif suit un workflow inspiré de Git Flow :
 
-- `main` : version stable du projet.
-- `develop` : branche d'intégration.
-- `feature/<clé-jira>-<description>` : développement d'une fonctionnalité.
+- `main` : Version stable et déployable du projet.
+- `develop` : Branche d'intégration des fonctionnalités validées.
+- `feature/<clé-jira>-<description>` : Branche dédiée au développement d'une fonctionnalité ou d'une page.
 
-Chaque fonctionnalité doit être intégrée via une **Pull Request**, relue par un autre membre de l'équipe et associée à une user story. Aucun push direct n'est autorisé sur `main` ou `develop`.
+Chaque fonctionnalité doit être intégrée via une **Pull Request**, relue et approuvée par un membre de l'équipe, et associée à une user story. Aucun push direct n'est autorisé sur `main` ou `develop`.
+
+---
 
 ## 👥 Équipe du projet
 
-Projet réalisé en trinôme dans le cadre d'un travail collaboratif de conception et de développement web.
+Projet réalisé dans le cadre d'un travail collaboratif de conception et de développement web :
 
-- **Membre 1 :** [ BEN ABOU ANASS ]
-- **Membre 2 :** [ ELHOUSSINE ASSOUMA ]
-- **Membre 3 :** [ Aouaj Yassine ]
-- **Membre 3 :** [ LAMSSIAH MOHAMED ]
-- **Membre 3 :** [ Zakarya Roua ]
+- **Membre :** BEN ABOU ANASS
+- **Membre :** ELHOUSSINE ASSOUMA
+- **Membre :** Aouaj Yassine
+- **Membre :** LAMSSIAH MOHAMED
+- **Membre :** Zakarya Roua
 
+*Les rôles transversaux (Scrum Master, Gardien du Design System, Gardien de l'accessibilité) sont répartis au sein de l'équipe.*
 
-
-Les rôles Scrum Master, Gardien du Design System et Gardien de l'accessibilité sont répartis au sein de l'équipe.
+---
 
 ## 🔗 Liens du projet
 
 - **Dépôt GitHub :** https://github.com/zakarya0roua/Marchica-Trips
-- **Maquette Figma :** [Ajouter le lien Figma]
-- **Site déployé :** [Ajouter le lien Netlify, Vercel ou GitHub Pages]
-- **Board de suivi :** [Ajouter le lien Jira ou GitHub Projects]
+- **Maquette Figma :** [À confirmer / Ajouter le lien Figma]
+- **Site déployé :** [À confirmer / Ajouter le lien Netlify, Vercel ou GitHub Pages]
+- **Board de suivi :** [À confirmer / Ajouter le lien Jira ou GitHub Projects]
+
+---
 
 ## 🎯 Objectifs pédagogiques
 
 - Concevoir une interface responsive selon une approche mobile-first.
-- Appliquer les principes fondamentaux de l'accessibilité web.
-- Construire un Design System réutilisable.
+- Appliquer les principes fondamentaux de l'accessibilité web (normes WCAG).
+- Construire un Design System réutilisable avec Tailwind CSS v4.
 - Collaborer efficacement avec Git, GitHub et les Pull Requests.
-- Organiser le travail à l'aide d'un board et d'un sprint.
-- Tester et déployer une application web.
+- Organiser le travail en équipe à l'aide d'un board agile et de sprints.
+- Automatiser l'environnement de développement et de build avec Vite.
+
+---
 
 ## 📄 Licence
 
