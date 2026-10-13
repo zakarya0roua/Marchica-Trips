@@ -48,18 +48,25 @@ L'objectif est d'offrir une expérience utilisateur fluide sur mobile, tablette 
 
 ```text
 Marchica-Trips/
-├── public/
-│   └── images/
-├── src/
-│   ├── assets/
-│   ├── components/
-│   ├── pages/
-│   ├── styles/
-│   └── main.js
-├── index.html
-├── package.json
-├── vite.config.js
-└── README.md
+│
+├── index.html                 # Page d'accueil
+├── activites.html             # Liste des activités
+├── detail-activite.html       # Détail d'une activité
+├── reservation.html           # Formulaire de réservation
+├── faq.html                   # Questions fréquentes
+│
+├── css/
+│   └── style.css              # Styles communs du site
+│
+├── images/
+│   ├── logo.png
+│   ├── hero-marchica.jpg
+│   ├── kayak.jpg
+│   ├── bateau.jpg
+│   ├── gourougou.jpg
+│   └── cuisine.jpg
+│
+└── README.md                  # Documentation du projet
 ```
 
 *Cette arborescence est indicative : adapte-la à la structure réelle du projet.*
