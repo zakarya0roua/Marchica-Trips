@@ -208,9 +208,9 @@ Projet réalisé dans le cadre d'un travail collaboratif de conception et de dé
 ## 🔗 Liens du projet
 
 - **Dépôt GitHub :** https://github.com/zakarya0roua/Marchica-Trips
-- **Maquette Figma :** [À confirmer / Ajouter le lien Figma]
+- **Maquette Figma :** [https://www.figma.com/design/6RqGnsSUF6fmcDuHzKepR1/Marchica-Trips?node-id=11-3&t=heQqJaUfas7qukF1-1]
 - **Site déployé :** [À confirmer / Ajouter le lien Netlify, Vercel ou GitHub Pages]
-- **Board de suivi :** [À confirmer / Ajouter le lien Jira ou GitHub Projects]
+- **Board de suivi :** [https://zakaria4456.atlassian.net/jira/software/projects/SCRUM/boards/1?filter=assignee+IN+%28empty%2C+712020%3Aea925e53-5874-4924-a1a2-0528eec9d580%29&groupBy=none&atlOrigin=eyJpIjoiOTdlMjkzOTA5MjcyNDM0OWE4NmM2N2ViN2EzOTliZWIiLCJwIjoiaiJ9]
 
 ---
 
