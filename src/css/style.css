@@ -1,2 +1,32 @@
 @import "tailwindcss";
 
+@theme {
+    /*Couleurs de la charte*/
+  --color-Créme: #F5F0EB; 
+  --color-bleu-nuit: #0E2A36;
+  --color-bleu-lagon: #00CED1;
+  --color-Blanc: #ffffff;
+  --color-text: #0B2530;
+  --font-bold: 700;
+  --font-normal: 400;  
+  --color-p: #5C6B73;
+  --color-custom: #00CED1;  
+  
+/*Polices de caractères*/
+  --font-titre: 'Lora', serif;
+  --font-texte: 'Source Sans 3', sans-serif;
+  --font-text: "Poppins", sans-serif;
+/* Tailles de titres Desktop & Mobile */
+  --text-h1: 52px;
+  --text-h1-mobile: 34px;
+  --text-h2: 38px;
+  --text-h2-mobile: 28px;
+  --text-h3: 13px;
+  --font-p: "Inter", sans-serif;
+  --text-p: 16px;
+/* Tailles des textes courants */
+  --text-accroche: 20px;
+  --text-courant: 17px;
+  --text-bouton: 17px;
+  --text-petit: 15px;
+}
