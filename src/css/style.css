@@ -1,0 +1,29 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-marchica-turquoise: #00CED1;
+  --color-marchica-navy: #0E2A36;
+  --color-marchica-cream: #F5F0EB;
+
+  --font-heading: "Lora", serif;
+  --font-body: "Source Sans 3", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-marchica-navy);
+}
+
+h1, h2, h3 {
+  font-family: var(--font-heading);
+}
+
+button, a {
+  -webkit-tap-highlight-color: transparent;
+}
