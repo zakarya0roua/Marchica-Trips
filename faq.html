@@ -8,29 +8,49 @@
 </head>
 <body class="bg-Créme">
     <!-- Header-->
+
 <header class="bg-bleu-nuit text-blanc w-full px-6 py-4">
-  <div class="max-w-[1408px] mx-auto flex items-center justify-between">
+  <div class="max-w-[1408px] mx-auto flex flex-wrap items-center justify-between gap-4">
+
+    <!-- Logo -->
     <a href="index.html" class="flex items-center shrink-0">
-      <img src="image/logo.webp" alt="Marchica Trips Logo" class="h-10 w-auto object-contain">
+      <img src="image/logo.webp" alt="Marchica Trips Logo"
+           class="h-10 w-auto object-contain">
     </a>
 
-    <nav class="hidden md:flex items-center gap-8 font-texte text-Blanc text-[17px] font-normal">
+    <!-- Checkbox -->
+    <input
+      type="checkbox"
+      id="menu-toggle"
+      class="peer sr-only"
+    />
+
+    <!-- Bouton menu mobile -->
+    <label
+      for="menu-toggle"
+      class="cursor-pointer text-white text-3xl md:hidden"
+    >
+      ☰
+      <span class="sr-only">Ouvrir le menu</span>
+    </label>
+
+    <!-- Navigation -->
+    <nav class="hidden w-full flex-col gap-4 peer-checked:flex md:flex md:w-auto md:flex-row md:items-center md:gap-8 font-texte text-[17px] font-normal">
       <a href="index.html" class="hover:text-bleu-lagon transition-colors">Accueil</a>
       <a href="activites.html" class="hover:text-bleu-lagon transition-colors">Activités</a>
       <a href="#" class="hover:text-bleu-lagon transition-colors">À propos</a>
       <a href="#" class="hover:text-bleu-lagon transition-colors">Contact</a>
       <a href="faq.html" class="hover:text-bleu-lagon transition-colors">FAQ</a>
+        <div class="shrink-0 mt-2 md:mt-0">
+            <a href="reservation.html"
+            class="bg-bleu-lagon text-bleu-nuit font-texte font-bold text-[17px] px-8 py-3 rounded-full hover:opacity-90 transition-opacity inline-block">
+             Réserver
+            </a>
+        </div>
     </nav>
-
-    <div class="shrink-0">
-      <a href="reservation.html"
-         class="bg-bleu-lagon text-bleu-nuit font-texte font-bold text-[17px] px-8 py-3 rounded-full hover:opacity-90 transition-opacity inline-block">
-        Réserver
-      </a>
-    </div>
-
   </div>
 </header>
+
 
      <!-- Main-->
       <main class="p-6 bg-Créme">
