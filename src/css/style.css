@@ -1,0 +1,50 @@
+@import "tailwindcss";
+@theme {
+  --color-lagoon: #087f8c;
+  --color-lagoon-dark: #055963;
+  --color-sea: #d9eef0;
+  --color-sand: #f6f4ed;
+  --color-paper: #ffffff;
+  --color-ink: #173238;
+  --color-muted: #52666b;
+  --color-line: #dce5e4;
+  --color-sunset: #a34f13;
+  --color-night: #10292f;
+  --font-sans: Inter, ui-sans-serif, system-ui, sans-serif;
+  --spacing-focus-ring: 3px;
+  --spacing-focus-offset: 4px;
+  --spacing-hero-mobile: 34rem;
+  --spacing-hero: 40rem;
+  --tracking-label: 0.18em;
+  --tracking-label-wide: 0.2em;
+  --tracking-label-compact: 0.16em;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-paper);
+    color: var(--color-ink);
+  }
+
+  a,
+  button,
+  summary,
+  input,
+  select,
+  textarea {
+    outline-offset: var(--spacing-focus-offset);
+  }
+
+  :focus-visible {
+    outline: var(--spacing-focus-ring) solid var(--color-sunset);
+  }
+
+  ::selection {
+    background-color: var(--color-sea);
+    color: var(--color-night);
+  }
+}
