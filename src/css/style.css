@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap');
+@import "tailwindcss";
+
+@theme {
+    /*Couleurs de la charte*/
+  --color-Créme: #F5F0EB; 
+  --color-bleu-nuit: #0E2A36;
+  --color-bleu-lagon: #00CED1;
+  --color-Blanc: #ffffff;
+  --color-text: #0B2530;
+  --font-bold: 700;
+  --font-normal: 400;  
+  --color-p: #5C6B73;
+  --color-custom: #00CED1;  
+  
+/*Polices de caractères*/
+  --font-titre: 'Lora', serif;
+  --font-texte: 'Source Sans 3', sans-serif;
+  --font-text: "Poppins", sans-serif;
+/* Tailles de titres Desktop & Mobile */
+  --text-h1: 52px;
+  --text-h1-mobile: 34px;
+  --text-h2: 38px;
+  --text-h2-mobile: 28px;
+  --text-h3: 13px;
+  --font-p: "Inter", sans-serif;
+  --text-p: 16px;
+/* Tailles des textes courants */
+  --text-accroche: 20px;
+  --text-courant: 17px;
+  --text-bouton: 17px;
+  --text-petit: 15px;
+
+  /* --- tokens ajoutes pour la page Activites (SCRUM-6) --- */
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --color-deep: #0a3542;
+  --color-deep-2: #0e4453;
+  --color-primary: #0b6e81;
+  --color-primary-dark: #0b6e81;
+  --color-cream: #faf7f1;
+  --color-sand: #f3eee3;
+  --color-ink: #0b3442;
+  --color-muted: #57707a;
+  --color-line: #e7e0d2;
+  --color-star: #f2a11d;
+  --color-badge: #e8f3f5;
+}
