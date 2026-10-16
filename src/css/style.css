@@ -44,16 +44,4 @@
   --color-line: #e7e0d2;
   --color-star: #f2a11d;
   --color-badge: #e8f3f5;
-
-  /* --- tokens etendus utilises par la page Activites (wa3) --- */
-  --radius-pill: 999px;
-  --radius-card: 14px;
-  --shadow-card: 0 8px 24px rgba(10, 53, 66, 0.06);
-  --shadow-card-hover: 0 14px 30px rgba(10, 53, 66, 0.14);
-  --container-content: 1200px;
-  --color-card-line: #efe9db;
-  --color-ink-soft: #23434f;
-  --color-primary-hover: #095a6a;
-  --color-primary-light: #3fb6c9;
-  --color-primary-soft: #7fd1de;
 }
