@@ -1,2 +1,14 @@
+
 @import "tailwindcss";
 
+@theme {
+  /* Couleurs du Design System */
+  --color-bleu-nuit: #073b4c;
+  --color-bleu-lagon: #06b6d4;
+  --color-blanc: #ffffff;
+  --color-creme: #f7f6f0;
+
+  /* Typographies */
+  --font-titre: "Lora", serif;
+  --font-texte: "Source Sans 3", sans-serif;
+}
