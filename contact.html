@@ -15,43 +15,25 @@
   <link rel="stylesheet" href="./src/css/style.css">
 </head>
 
-<body class="bg-sand font-sans text-ink">
+<body class="bg-cream font-sans text-ink antialiased">
 
-  <!-- HEADER -->
-  <header class="bg-night text-white">
-    <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-4 md:px-8">
-
-      <a href="/index.html" class="flex items-center gap-2">
-        <img src="/images/logo.webp" alt="" class="h-50 w-auto">
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="brand" href="/index.html" aria-label="Marchica Trips, accueil">
+        <img src="/images/logo.svg" alt="" width="48" height="40">
+        <span><span class="brand__name">Marchica Trips</span><span class="brand__tagline">Nador, au bord de la lagune</span></span>
       </a>
-
-      <nav aria-label="Navigation principale" class="hidden items-center gap-5 text-sm lg:flex">
-        <a href="/index.html" class="rounded px-2 py-2 hover:text-lagoon">Accueil</a>
-        <a href="/activites.html" class="rounded px-2 py-2 hover:text-lagoon">Activités</a>
-        <a href="/a-propos.html" class="rounded px-2 py-2 hover:text-lagoon">À propos</a>
-        <a href="/contact.html" aria-current="page" class="rounded px-2 py-2 font-bold text-lagoon">Contact</a>
-        <a href="/faq.html" class="rounded px-2 py-2 hover:text-lagoon">FAQ</a>
+      <nav class="desktop-nav" aria-label="Navigation principale">
+        <a href="/index.html">Accueil</a><a href="/activites.html">Activités</a><a href="/a-propos.html">À propos</a>
+        <a href="/faq.html">FAQ</a><a aria-current="page" href="/contact.html">Contact</a><a class="button" href="/contact.html#formulaire">Réserver</a>
       </nav>
-
-      <a href="#formulaire" class="hidden rounded-full bg-lagoon px-5 py-3 text-sm font-bold text-white hover:bg-lagoon-dark md:inline-flex">
-        Réserver
-      </a>
-
-      <!-- Menu mobile -->
-      <details class="relative lg:hidden">
-        <summary class="cursor-pointer rounded-lg border border-white/40 px-4 py-2">
-          Menu
-        </summary>
-
-        <nav aria-label="Navigation mobile" class="absolute right-0 top-full z-20 mt-2 grid min-w-48 gap-1 rounded-xl bg-night p-3 shadow-xl">
-          <a href="/index.html" class="rounded-lg px-3 py-3 hover:bg-white/10">Accueil</a>
-          <a href="/activites.html" class="rounded-lg px-3 py-3 hover:bg-white/10">Activités</a>
-          <a href="/a-propos.html" class="rounded-lg px-3 py-3 hover:bg-white/10">À propos</a>
-          <a href="/contact.html" aria-current="page" class="rounded-lg px-3 py-3 font-bold text-lagoon">Contact</a>
-          <a href="/faq.html" class="rounded-lg px-3 py-3 hover:bg-white/10">FAQ</a>
+      <details class="mobile-menu">
+        <summary aria-label="Ouvrir le menu de navigation">Menu</summary>
+        <nav class="mobile-nav" aria-label="Navigation principale">
+          <a href="/index.html">Accueil</a><a href="/activites.html">Activités</a><a href="/a-propos.html">À propos</a>
+          <a href="/faq.html">FAQ</a><a aria-current="page" href="/contact.html">Contact</a><a class="button" href="/contact.html#formulaire">Réserver</a>
         </nav>
       </details>
-
     </div>
   </header>
 

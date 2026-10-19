@@ -44,4 +44,275 @@
   --color-line: #e7e0d2;
   --color-star: #f2a11d;
   --color-badge: #e8f3f5;
+  --color-creme: #f5f0eb;
+  --color-blanc: #ffffff;
+  --color-bleu-nuit: #0e2a36;
+  --color-bleu-lagon: #00ced1;
+  --color-night: #0a3542;
+  --color-lagoon: #0b6e81;
+  --color-lagoon-dark: #0e4453;
+  --color-btn: #0b6e81;
+  --color-picker: #0e4453;
+  --color-primary-hover: #0e4453;
+  --color-primary-light: #3fb6c9;
+  --color-ink-soft: #57707a;
+  --color-card-line: #e7e0d2;
+  --font-lora: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-texte: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-titre: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --color-paper: #ffffff;
+  --container-content: 72rem;
+  --radius-card: 1rem;
+  --shadow-card: 0 12px 32px rgb(10 53 66 / 8%);
+  --font-display: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer components {
+  .skip-link {
+    position: absolute;
+    z-index: 100;
+    top: -4rem;
+    left: 1rem;
+    border-radius: 0.5rem;
+    background: white;
+    padding: 0.75rem 1rem;
+    color: var(--color-ink);
+    font-weight: 700;
+  }
+
+  .skip-link:focus {
+    top: 0.75rem;
+  }
+
+  .site-header {
+    background: var(--color-deep);
+  }
+
+  .site-header__inner {
+    position: relative;
+    display: flex;
+    width: min(100%, 76rem);
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-inline: auto;
+    padding: 0.875rem clamp(1.25rem, 4vw, 2rem);
+  }
+
+  .brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: white;
+    text-decoration: none;
+  }
+
+  .brand__mark {
+    display: grid;
+    width: 2.75rem;
+    aspect-ratio: 1;
+    place-items: center;
+    border-radius: 9999px;
+    background: var(--color-primary);
+    font-weight: 800;
+  }
+
+  .brand img {
+    display: block;
+    width: 3rem;
+    height: 2.5rem;
+    object-fit: contain;
+  }
+
+  .brand__name,
+  .brand__tagline {
+    display: block;
+  }
+
+  .brand__name {
+    font-weight: 800;
+  }
+
+  .brand__tagline {
+    margin-top: 0.125rem;
+    color: rgb(255 255 255 / 75%);
+    font-size: 0.75rem;
+  }
+
+  .desktop-nav {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .desktop-nav a:not(.button) {
+    color: rgb(255 255 255 / 88%);
+    font-size: 0.9rem;
+    text-decoration: none;
+  }
+
+  .desktop-nav a[aria-current="page"]:not(.button),
+  .desktop-nav a:not(.button):hover {
+    color: white;
+    text-decoration: underline;
+    text-underline-offset: 0.3em;
+  }
+
+  .mobile-menu {
+    display: none;
+  }
+
+  .button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9999px;
+    background: var(--color-primary);
+    padding: 0.8rem 1.25rem;
+    color: white;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  .button:hover {
+    background: var(--color-deep-2);
+  }
+
+  .eyebrow {
+    color: var(--color-primary);
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .section-title {
+    color: var(--color-ink);
+    font-family: var(--font-display);
+    font-size: 1.75rem;
+    font-weight: 800;
+    line-height: 1.2;
+  }
+
+  .activity-filter-controls {
+    border: 0;
+    padding: 0;
+  }
+
+  .activity-filter-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.7rem;
+  }
+
+  .activity-filter-option {
+    cursor: pointer;
+  }
+
+  .activity-filter-option input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    clip-path: inset(50%);
+  }
+
+  .activity-filter-option span {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    border: 1px solid var(--color-card-line);
+    border-radius: 9999px;
+    background: white;
+    padding: 0.55rem 1.1rem;
+    color: var(--color-ink);
+    font-size: 0.82rem;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+
+  .activity-filter-option input:checked + span {
+    border-color: var(--color-primary);
+    background: var(--color-primary);
+    color: white;
+  }
+
+  .activity-filter-option input:focus-visible + span {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 3px;
+  }
+
+  .activity-catalogue:has([value="water"]:checked) .activity-grid > li:not([data-category~="water"]),
+  .activity-catalogue:has([value="nature"]:checked) .activity-grid > li:not([data-category~="nature"]),
+  .activity-catalogue:has([value="culture"]:checked) .activity-grid > li:not([data-category~="culture"]),
+  .activity-catalogue:has([value="relax"]:checked) .activity-grid > li:not([data-category~="relax"]),
+  .activity-catalogue:has([value="adventure"]:checked) .activity-grid > li:not([data-category~="adventure"]),
+  .activity-catalogue:has([value="sea"]:checked) .activity-grid > li:not([data-category~="sea"]) {
+    display: none;
+  }
+}
+
+@media (max-width: 64rem) {
+  .site-header__inner {
+    gap: 1rem;
+  }
+
+  .desktop-nav {
+    display: none;
+  }
+
+  .mobile-menu {
+    position: relative;
+    display: block;
+  }
+
+  .mobile-menu summary {
+    cursor: pointer;
+    border: 1px solid rgb(255 255 255 / 35%);
+    border-radius: 9999px;
+    padding: 0.55rem 0.9rem;
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 700;
+    list-style: none;
+  }
+
+  .mobile-menu summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .mobile-nav {
+    position: absolute;
+    z-index: 10;
+    top: calc(100% + 0.75rem);
+    right: 0;
+    display: none;
+    min-width: 13rem;
+    flex-direction: column;
+    gap: 0.25rem;
+    border: 1px solid var(--color-line);
+    border-radius: 0.75rem;
+    background: white;
+    padding: 0.75rem;
+    box-shadow: var(--shadow-card);
+  }
+
+  .mobile-menu[open] .mobile-nav {
+    display: flex;
+  }
+
+  .mobile-nav a:not(.button) {
+    border-radius: 0.5rem;
+    padding: 0.65rem 0.75rem;
+    color: var(--color-ink);
+    text-decoration: none;
+  }
+
+  .mobile-nav a:not(.button):hover,
+  .mobile-nav a[aria-current="page"]:not(.button) {
+    background: var(--color-badge);
+  }
 }
