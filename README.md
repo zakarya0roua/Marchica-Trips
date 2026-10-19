@@ -60,8 +60,18 @@ L'arborescence du projet est organisée selon la structure suivante :
 marchica-trips/
 ├── index.html                 # Page d'accueil
 ├── activites.html             # Liste des activités touristiques
+├── a-propos.html              # Présentation de Marchica Trips et de sa mission
 ├── detail-activite.html       # Détails, programme, prix, galerie et infos pratiques d'une activité
-├── reservation.html           # Formulaire de réservation
+├── detaille_arte/             # Une page de détail distincte pour chaque activité du catalogue
+│   ├── kayak.html
+│   ├── quad.html
+│   ├── bateau.html
+│   ├── oiseaux.html
+│   ├── paddle.html
+│   ├── equitation.html
+│   ├── randonnee.html
+│   └── plage.html
+├── contact.html               # Coordonnées et formulaire de réservation
 ├── faq.html                   # Questions fréquentes
 ├── src/
 │   └── css/
@@ -80,8 +90,10 @@ marchica-trips/
 
 - **`index.html`** : Page d'accueil présentant le concept de Marchica Trips, les points forts de la région et les activités vedettes.
 - **`activites.html`** : Catalogue complet des activités touristiques proposées avec filtres ou catégorisations visuelles.
-- **`detail-activite.html`** : Page détaillée dédiée à une activité spécifique (galerie photos, itinéraire, programme détaillé, tarifs, durée, matériel inclus et recommandations).
-- **`reservation.html`** : Formulaire de réservation accessible avec validation native HTML5 (champs requis, types de saisie, limites de dates et de participants).
+- **`a-propos.html`** : Présentation de Marchica Trips, de son approche et de ses engagements.
+- **`detaille_arte/`** : Pages de détail propres aux huit activités du catalogue ; chaque bouton « Découvrir » mène à la fiche correspondante.
+- **`detail-activite.html`** : Page de détail historique du kayak.
+- **`contact.html`** : Coordonnées et formulaire de demande de réservation, avec validation native HTML5.
 - **`faq.html`** : Réponses aux questions fréquentes des voyageurs, organisées à l'aide d'éléments natifs `<details>` et `<summary>` sans script.
 - **`src/css/style.css`** : Point d'entrée des styles important Tailwind CSS v4 (`@import "tailwindcss";`), les design tokens du thème (`@theme`) et les ajustements CSS personnalisés.
 - **`public/images/` & `public/icons/`** : Répertoires d'actifs statiques servis directement par Vite (photos de la lagune, logos, icônes SVG).
@@ -165,6 +177,17 @@ npm run preview
 
 ---
 
+## 🌐 Déploiement GitHub Pages
+
+Le workflow [deploy.yml](./.github/workflows/deploy.yml) installe les dépendances, compile le site avec Vite et publie le contenu de `dist/` sur chaque push vers `main`.
+
+Dans les paramètres du dépôt, choisissez **Settings → Pages → Build and deployment → Source → GitHub Actions**. Le site utilise le chemin de base `/Marchica-Trips/`, requis pour l'URL de ce dépôt :
+https://zakarya0roua.github.io/Marchica-Trips/
+
+Les liens et les ressources des pages utilisent la base Vite afin de fonctionner à la fois en local et sur GitHub Pages.
+
+---
+
 ## 📐 Bonnes pratiques et accessibilité
 
 Le développement respecte des exigences strictes en matière de qualité web et d'accessibilité :
@@ -209,7 +232,7 @@ Projet réalisé dans le cadre d'un travail collaboratif de conception et de dé
 
 - **Dépôt GitHub :** https://github.com/zakarya0roua/Marchica-Trips
 - **Maquette Figma :** [https://www.figma.com/design/6RqGnsSUF6fmcDuHzKepR1/Marchica-Trips?node-id=11-3&t=heQqJaUfas7qukF1-1]
-- **Site déployé :** [À confirmer / Ajouter le lien Netlify, Vercel ou GitHub Pages]
+- **Site déployé :** https://zakarya0roua.github.io/Marchica-Trips/
 - **Board de suivi :** [https://zakaria4456.atlassian.net/jira/software/projects/SCRUM/boards/1?filter=assignee+IN+%28empty%2C+712020%3Aea925e53-5874-4924-a1a2-0528eec9d580%29&groupBy=none&atlOrigin=eyJpIjoiOTdlMjkzOTA5MjcyNDM0OWE4NmM2N2ViN2EzOTliZWIiLCJwIjoiaiJ9]
 
 ---
