@@ -77,12 +77,41 @@
       </section>
     </main>
 
-    <footer class="border-t border-line bg-paper">
-      <div class="mx-auto flex max-w-content flex-col gap-4 px-5 py-8 text-sm text-muted md:flex-row md:items-center md:justify-between md:px-8">
-        <a class="brand text-ink" href="%BASE_URL%index.html" aria-label="Marchica Trips, accueil"><img src="/images/logo.svg" alt="" width="44" height="36"><span class="brand__name">Marchica Trips</span></a>
-        <nav class="flex flex-wrap gap-5" aria-label="Navigation de pied de page"><a href="%BASE_URL%index.html">Accueil</a><a href="%BASE_URL%activites.html">Activités</a><a href="%BASE_URL%faq.html">FAQ</a><a href="%BASE_URL%contact.html">Contact</a></nav>
-        <p>Nador, Maroc</p>
+   <footer class="bg-deep text-white">
+    <div class="mx-auto w-full max-w-content px-8 grid grid-cols-1 md:grid-cols-[2fr_1fr_1fr_1.4fr] gap-8 pt-10 pb-7">
+      <div>
+        <p class="flex items-center gap-[0.6rem] mb-[0.6rem]">
+          <img src="/images/logo.svg" alt="" width="44" height="28" />
+          <span class="font-extrabold tracking-[0.06em] text-[0.95rem] leading-[1.1]">MARCHICA<br /><span class="text-[0.68rem] font-semibold tracking-[0.28em]">TRIPS</span></span>
+        </p>
+        <p class="text-[0.8rem] text-white/75">Explorez. Découvrez. Vivez.</p>
       </div>
-    </footer>
+      <nav aria-label="Liens utiles">
+        <h2 class="text-[0.75rem] font-extrabold text-primary-light mb-[0.8rem]">Liens utiles</h2>
+        <ul class="text-[0.8rem] grid gap-[0.4rem]">
+          <li><a href="%BASE_URL%index.html" class="text-white/80 no-underline">Accueil</a></li>
+          <li><a href="%BASE_URL%activites.html" class="text-white/80 no-underline">Activités</a></li>
+          <li><a href="%BASE_URL%a-propos.html" class="text-white/80 no-underline">À propos</a></li>
+          <li><a href="%BASE_URL%contact.html" class="text-white/80 no-underline">Contact</a></li>
+          <li><a href="%BASE_URL%faq.html" class="text-white/80 no-underline">FAQ</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h2 class="text-[0.75rem] font-extrabold text-primary-light mb-[0.8rem]">Suivez-nous</h2>
+        <p class="text-[0.8rem] text-white/75">Nos réseaux sociaux arrivent bientôt.</p>
+      </div>
+      <address class="not-italic text-[0.78rem] text-white/80 grid gap-[0.4rem] content-start">
+        <span>◉ Nador, Maroc</span>
+        <a href="mailto:contact@marchicatrips.com" class="text-white/80">✉ contact@marchicatrips.com</a>
+        <a href="tel:+212612345678" class="text-white/80">☎ +212 6 12 34 56 78</a>
+      </address>
+    </div>
+    <div class="border-t border-white/15">
+      <div class="mx-auto w-full max-w-content px-8 flex flex-wrap justify-between gap-x-4 gap-y-1 pt-[14px] pb-[14px] text-[0.72rem] text-white/60">
+        <p>© 2025 Marchica Trips. Tous droits réservés.</p>
+        <p>Mentions légales | Politique de confidentialité</p>
+      </div>
+    </div>
+  </footer>
   </body>
 </html>
