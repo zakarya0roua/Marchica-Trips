@@ -177,17 +177,6 @@ npm run preview
 
 ---
 
-## 🌐 Déploiement GitHub Pages
-
-Le workflow [deploy.yml](./.github/workflows/deploy.yml) installe les dépendances, compile le site avec Vite et publie le contenu de `dist/` sur chaque push vers `main`.
-
-Dans les paramètres du dépôt, choisissez **Settings → Pages → Build and deployment → Source → GitHub Actions**. Le site utilise le chemin de base `/Marchica-Trips/`, requis pour l'URL de ce dépôt :
-https://zakarya0roua.github.io/Marchica-Trips/
-
-Les liens et les ressources des pages utilisent la base Vite afin de fonctionner à la fois en local et sur GitHub Pages.
-
----
-
 ## 📐 Bonnes pratiques et accessibilité
 
 Le développement respecte des exigences strictes en matière de qualité web et d'accessibilité :
@@ -232,7 +221,7 @@ Projet réalisé dans le cadre d'un travail collaboratif de conception et de dé
 
 - **Dépôt GitHub :** https://github.com/zakarya0roua/Marchica-Trips
 - **Maquette Figma :** [https://www.figma.com/design/6RqGnsSUF6fmcDuHzKepR1/Marchica-Trips?node-id=11-3&t=heQqJaUfas7qukF1-1]
-- **Site déployé :** https://zakarya0roua.github.io/Marchica-Trips/
+- **Site déployé :** [À confirmer / Ajouter le lien Netlify, Vercel ou GitHub Pages]
 - **Board de suivi :** [https://zakaria4456.atlassian.net/jira/software/projects/SCRUM/boards/1?filter=assignee+IN+%28empty%2C+712020%3Aea925e53-5874-4924-a1a2-0528eec9d580%29&groupBy=none&atlOrigin=eyJpIjoiOTdlMjkzOTA5MjcyNDM0OWE4NmM2N2ViN2EzOTliZWIiLCJwIjoiaiJ9]
 
 ---
